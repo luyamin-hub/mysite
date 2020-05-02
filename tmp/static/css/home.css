@@ -1,0 +1,63 @@
+ .about_me  {
+  height: 100%;
+  width: 100%;
+  background: url(../media/img/bg-14.jpeg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+ .home  {
+  height: 100%;
+  width: 100%;
+  background: url(../media/img/bg-14.jpeg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.paginator{
+     /*margin-left: 10% !important;*/
+}
+
+.paginator .blog-list-footer{
+    margin-left: 10px;
+}
+
+.blog .containter{
+   padding-top:6em;
+}
+
+.blog-avatar{
+    display: inline-block;
+}
+
+.blog-avatar img{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+}
+
+}
+.blog-detail-img{
+    display: block;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.blog-list-avatar{
+    display: inline-block;
+}
+
+.blog-list-avatar img{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+}
+.paginator{
+     margin-left: 30% !important;
+}
+
+.paginator .blog-list-footer{
+    margin-left: 30px;
+}

@@ -20,6 +20,8 @@ class UserExtension(models.Model):
     school = models.CharField(max_length=20, verbose_name='学校',blank=True)
     create_time = models.DateTimeField(auto_now_add=True,verbose_name='创建时间')
     last_updated_time = models.DateTimeField(auto_now=True,verbose_name='最后修改时间')
+    class Meta:
+      verbose_name_plural = "拓展用户"  
 
 @receiver(post_save, sender=User)
 def create_user_extension(sender, instance, created, **kwargs):

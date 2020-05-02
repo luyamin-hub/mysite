@@ -144,6 +144,7 @@ main {
      margin-top: 50px ! important;
      border-bottom: 0;
      margin-bottom: 50px ! important;
+     overflow-x:hidden;
 }
 section {
     padding-top: 3em;

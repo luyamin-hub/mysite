@@ -30,18 +30,17 @@ class SendMail(threading.Thread):
         )
 
 class Comment(models.Model):
-    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField()
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE,verbose_name= "评论对象模型")
+    object_id = models.PositiveIntegerField(verbose_name= "模型id")
     content_object = GenericForeignKey('content_type', 'object_id')
 
-    text = models.TextField()
-    comment_time = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, related_name="comments", on_delete=models.CASCADE)
+    text = models.TextField(verbose_name= "评论内容")
+    comment_time = models.DateTimeField(auto_now_add=True,verbose_name= "评论时间")
+    user = models.ForeignKey(User, related_name="comments", on_delete=models.CASCADE,verbose_name= "评论用户")
 
-    root = models.ForeignKey('self', related_name='root_comment', null=True, on_delete=models.CASCADE)
-    parent = models.ForeignKey('self', related_name='parent_comment', null=True, on_delete=models.CASCADE)
-    reply_to = models.ForeignKey(User, related_name="replies", null=True, on_delete=models.CASCADE)
-    
+    root = models.ForeignKey('self', related_name='root_comment', null=True, on_delete=models.CASCADE,verbose_name= "评论根评论对象")
+    parent = models.ForeignKey('self', related_name='parent_comment', null=True, on_delete=models.CASCADE,verbose_name= "评论父评论对象")
+    reply_to = models.ForeignKey(User, related_name="replies", null=True, on_delete=models.CASCADE,verbose_name= "回复对象")
 
     def send_mail(self):
         if self.parent is None:
@@ -68,5 +67,9 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['comment_time']
+        verbose_name_plural = "评论"  
+
+
+
 
 

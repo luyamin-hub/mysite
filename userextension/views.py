@@ -77,7 +77,7 @@ def send_verification_code(request):
             request.session['send_code_time'] = now            
             # 发送邮件
             send_mail(
-                '博客注册',
+                '博客主题：%s' % send_for,
                 '验证码：%s' % code,
                 '2039013391@qq.com',
                 [email],

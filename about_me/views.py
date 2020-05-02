@@ -4,7 +4,7 @@ from blog.models import Blog
 # Create your views here.
 def about_me(request):
     # recommend_blogs = Blog.objects.filter(recommend_blog=True)[:5] 
-    about_me = get_object_or_404(AboutMe,pk=1)
+    about_me = AboutMe.objects.all().first()
     recommend_blogs = Blog.objects.filter(recommend_blog=True)[:5] 
     new_blogs = Blog.objects.all()[:8]
     context = {}

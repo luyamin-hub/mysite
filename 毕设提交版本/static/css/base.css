@@ -1,0 +1,244 @@
+/*/*-/*@charset "UTF-8";
+
+/* 0 - 全局
+-------------------------------- */
+
+/*a{ color: #c40b00; }
+
+.wrap{ max-width: 1000px; }
+
+/* 1 - 页眉
+-------------------------------- */
+
+/* - 侧边栏 */
+/*.sidebar{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 250px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #4b4b4b;
+}*/
+
+/* -- 头像 */
+/*.sidebar .avatar{
+    width: 160px;
+    height: 160px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 100%;
+    border: #fff 5px solid;
+    transition: transform 0.5s;
+}*/
+/*.sidebar .avatar:hover{
+    transform: rotate(1turn);
+}
+.sidebar .avatar img{
+    border-radius: 100%;
+}*/
+
+/* -- 侧边栏导航 */
+/*.sidebar .nav{
+    margin: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.sidebar .nav a{
+    color: #fff;
+    padding: 1em;
+    display: block;
+    text-align: center;
+    transition: background .3s, box-shadow .3s;
+}
+.sidebar .nav a:hover{
+    background: rgba(0, 0, 0, .2);
+}
+
+.sidebar
+
+main{
+    margin-left: 250px;
+    overflow-x:hidden;
+    min-height: 100%;
+}
+@media screen and (max-width: 900px) {
+    .sidebar {
+        width: inherit;
+        position: relative;
+    }
+    .sidebar .nav{
+        background: #f8bd24;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .sidebar .nav a:hover{
+        background: none;
+        box-shadow: 0 -3px 0 #fff inset;
+    }
+    main{
+        margin-left: 0;
+    }
+}*/
+
+/*@media print{
+    .sidebar{
+        display: none;
+    }
+    main{
+        margin-left: 0;
+
+    }
+}
+*/
+
+/* 2 - 正文
+-------------------------------- */
+/*main section{
+    padding: 1em 0;
+    position: relative;
+}
+
+@media screen and (max-width: 900px) {
+    main section{
+        padding: 3em 0;
+    }
+}
+.title{
+    margin-bottom: 1em;
+}
+.title:before{
+    float: left;
+    margin-right: .5em;
+    font-family: "FontAwesome";
+}*/
+
+
+
+
+/*/* 3 - 页尾
+-------------------------------- */
+/*footer{
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    background: #72655b;
+}
+footer a{
+    color: inherit;
+}*/
+
+*{
+        
+   margin: 0;
+    padding: 0;
+    margin-bottom: 0px;
+    font-family: "微软雅黑";
+
+}
+
+main {
+     margin-top: 50px ! important;
+     border-bottom: 0;
+     margin-bottom: 50px ! important;
+     overflow-x:hidden;
+}
+section {
+    padding-top: 3em;
+    padding-bottom: 9.7em;
+}
+/*div a:link{color:#B8860B;} */
+
+ul {
+    list-style-type: none ! important;
+}
+
+.search-form button[type="submit"] {
+    background: none;
+    border: none;
+    margin-left: -3em;
+    color: #aaa;
+}
+
+img, svg, video{
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.foot .container{
+    color: #fff;
+    padding: 1em ;
+    text-align: center;
+
+}
+.foot .container a{
+    color: inherit;
+}
+img[bk-image=active]{
+    cursor: pointer;
+    cursor: zoom-in;
+}
+
+.bk-image{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 66;
+    position: fixed;
+    user-select: none;
+}
+
+.bk-image:before{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    animation: fade-in .5s both;
+    -webkit-animation: fade-in .5s both;
+    background: rgba(0, 0, 0, .5);
+}
+
+.bk-image img{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    cursor: zoom-out;
+    position: absolute;
+    animation: fade-small-large .3s both;
+    -webkit-animation: fade-small-large .3s both;
+}
+
+.bk-image.remove:before{
+    animation: fade-off .3s both;
+    -webkit-animation: fade-off .3s both;
+}
+
+.bk-image.remove img{
+    animation: fade-large-small .3s both;
+    -webkit-animation: fade-large-small .3s both;
+}
+
+.bk-image img[src$=".jpg"]{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+div.like {
+    color: #337ab7;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em 0.3em;
+}
+
+div.like .active{
+    color: #f50017;
+}

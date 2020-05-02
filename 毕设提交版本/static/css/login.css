@@ -1,0 +1,24 @@
+.login {
+  height: 100%;
+  width: 100%;
+  background: url(../media/img/bg-13.jpg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+}
+.login .containter{
+     padding-top: 5em ! important;
+     padding-bottom: 14em ! important;
+}
+
+.login .input-group{
+    margin-bottom: 20px ! important;
+}
+
+.login .input-group input{
+   width: 85% ! important;
+}
+
+.login .form-size{
+    margin-top: 1em;
+}
